@@ -13,6 +13,7 @@
     "test:ci": "echo $(node -v) &&CI=true jest --silent",
     "test:staged": "jest --silent --passWithNoTests --findRelatedTests ",
     "storybook": "storybook dev -p 6688",
+    "release": "semantic-release",
     "build-storybook": "storybook build"
   },
   "dependencies": {
