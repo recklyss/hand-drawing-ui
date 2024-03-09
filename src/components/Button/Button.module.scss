@@ -1,0 +1,41 @@
+@import '../../themes/base';
+
+.wiredButton {
+  :global {
+    .wired-rendered {
+      background-color: red;
+    }
+  }
+  border: 0;
+  box-sizing: border-box;
+  cursor: help;
+  min-height: 48px;
+  border-radius: 12px;
+  font-weight: 500;
+  font-size: 18px;
+  &:hover,
+  &:active {
+    outline: none;
+  }
+
+  &:disabled {
+    cursor: unset;
+
+    &:hover,
+    &:active,
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.buttonContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    margin-right: 8px;
+  }
+}
+
