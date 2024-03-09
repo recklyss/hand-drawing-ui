@@ -1,30 +1,32 @@
-# React + TypeScript + Vite
+# Hand Drawing UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React UI library based on the [wired js](https://wiredjs.com/).
+It's also using Google font `Schoolbell` which is a hand drawing font and suitable for this UI.
 
-Currently, two official plugins are available:
+# Start locally
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Prerequisites
 
-## Expanding the ESLint configuration
+- NodeJS
+- NPM
+- NVM
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Run the following commands
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```shell
+nvm install 20
+nvm use
+npm install
+npm run dev
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+The application starts at `http://localhost:5173/`.
+
+
+
+## Incidental
+
+- [CommitLint](https://github.com/conventional-changelog/commitlint): see the conventional commit message [here](https://www.conventionalcommits.org/en/v1.0.0/)
+- husky
+
+
