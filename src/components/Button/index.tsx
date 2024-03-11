@@ -1,70 +1,49 @@
+import { ButtonHTMLAttributes, ReactElement } from 'react';
+import { WiredButton } from 'wired-elements';
+
 import 'wired-elements';
-import classes from './Button.module.scss';
-import { ReactElement, ReactNode } from 'react';
+import styled from 'styled-components';
+
+const Container = styled.div`
+  width: max-content;
+`;
+
+const ButtonContent = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+
+  svg {
+    width: 14px;
+    height: 14px;
+  }
+`;
 
 export type ButtonProps = {
-  /**
-   * Variant for the button
-   */
-  variant?: 'primary' | 'secondary' | 'link';
-  /**
-   * Icon to be displayed at the front of the text
-   */
-  icon?: ReactElement;
 
   /**
-   * Custom width for the button. Can be in form of any css unit of measurement (%, px, rem, etc)
+   * Icon which is shown on the button
    */
-  width?: string;
+  icon?: ReactElement
 
   /**
-   * Custom maxWidth for the button. Can be in form of any css unit of measurement (%, px, rem, etc)
+   * The elevation of the hand drawing level, by default is 1
    */
-  maxWidth?: string;
-
-  /**
-   * Custom padding for the button. Can be in form of any css padding format
-   */
-  padding?: string;
-
-  /**
-   * Font size for the button. Can be in form of any css unit of measurement (%, px, rem, etc)
-   */
-  fontSize?: string;
-
-  /**
-   * Test id value to help with any form of automated testing
-   */
-  dataTestId?: string;
-
-  /**
-   * React children element
-   */
-  children?: ReactNode;
-
-  /**
-   * Button click function
-   */
-  onClick?: () => void;
-};
+  elevation?: number
+} & ButtonHTMLAttributes<WiredButton>;
 
 export const Button = ({
-                         icon,
-                         width,
-                         maxWidth,
-                         padding = '0 12px',
-                         dataTestId,
                          onClick,
-                         fontSize = '14px',
-                         children
+                         children,
+                         icon,
+                         elevation = 1,
                        }: ButtonProps) =>
-  <wired-button className={classes.wiredButton}
-                data-testid={dataTestId}
-                onClick={onClick}
-                style={{ width, maxWidth, padding, fontSize }}
-  >
-    <div className={classes.buttonContent}>
-      {icon}
-      {children}
-    </div>
-  </wired-button>
+  <Container>
+    <wired-button onClick={onClick} elevation={elevation}>
+      <ButtonContent>
+        {icon}
+        {children}
+      </ButtonContent>
+    </wired-button>
+  </Container>
