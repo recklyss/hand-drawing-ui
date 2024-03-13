@@ -1,8 +1,8 @@
 import { ButtonHTMLAttributes, ReactElement } from 'react';
-import { WiredButton } from 'wired-elements';
-
-import 'wired-elements';
+import { WiredButton as WiredButtonType } from 'wired-elements/lib/wired-button';
 import styled from 'styled-components';
+import { createComponent, ReactWebComponent } from '@lit-labs/react';
+import * as React from 'react';
 
 const Container = styled.div`
   width: max-content;
@@ -31,7 +31,13 @@ export type ButtonProps = {
    * The elevation of the hand drawing level, by default is 1
    */
   elevation?: number
-} & ButtonHTMLAttributes<WiredButton>;
+} & ButtonHTMLAttributes<WiredButtonType>;
+
+const WiredButton: ReactWebComponent<WiredButtonType> = createComponent({
+  react: React,
+  tagName: 'wired-button',
+  elementClass: WiredButtonType
+});
 
 export const Button = ({
                          onClick,
@@ -40,10 +46,10 @@ export const Button = ({
                          elevation = 1,
                        }: ButtonProps) =>
   <Container>
-    <wired-button onClick={onClick} elevation={elevation}>
+    <WiredButton onClick={onClick} elevation={elevation}>
       <ButtonContent>
         {icon}
         {children}
       </ButtonContent>
-    </wired-button>
+    </WiredButton>
   </Container>
