@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Button } from './index.tsx';
 import ReactIcon from '../../assets/icons/react-icon.tsx';
+import { Button } from './index.tsx';
 
 const meta = {
   title: 'Components/Button',

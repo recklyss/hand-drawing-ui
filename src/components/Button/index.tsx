@@ -15,12 +15,13 @@ const ButtonContent = styled.div`
   gap: 8px;
 
   svg {
+    color: dimgrey;
     width: 14px;
     height: 14px;
   }
 `;
 
-export type ButtonProps = {
+type ButtonProps = {
 
   /**
    * Icon which is shown on the button
