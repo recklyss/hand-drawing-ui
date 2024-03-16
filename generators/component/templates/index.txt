@@ -1,0 +1,4 @@
+import { <%= ComponentName %> } from './<%= ComponentName %>';
+
+export * from './<%= ComponentName %>';
+export default <%= ComponentName %>;

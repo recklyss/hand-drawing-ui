@@ -1,0 +1,18 @@
+import styled from 'styled-components';
+import { createComponent, ReactWebComponent } from '@lit-labs/react';
+import * as React from 'react';
+
+type <%= ComponentName %>Props = {
+
+  /**
+   * The elevation of the hand drawing level, by default is 1
+   */
+  elevation?: 1 | 2 | 3 | 4 | 5
+};
+
+/**
+ * <%= ComponentDescription %>
+ */
+export const <%= ComponentName %> = (props: <%= ComponentName %>Props) => (
+  <div><%= ComponentName %></div>
+);
