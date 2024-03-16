@@ -4,7 +4,11 @@ import { Card } from './Card';
 const meta = {
   title: 'Components/Card',
   component: Card,
-  tags: ['autodocs'],
+  tags: [ 'autodocs' ],
+  args: {
+    children: 'My Button',
+    elevation: 2,
+  },
   argTypes: {},
 } satisfies Meta<typeof Card>;
 
@@ -12,5 +16,9 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  args: {}
+  args: {
+    width: 100,
+    height: 100,
+    children: 'this is normal text'
+  }
 };
