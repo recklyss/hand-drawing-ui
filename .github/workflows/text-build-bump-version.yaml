@@ -27,7 +27,10 @@ jobs:
           npm run build
           echo "Finished running build"
       - name: publish alpha
+        env:
+          NPM_AUTH: ${{ secrets.NPM_AUTH }}
         run: |
+          sh release.sh ${{ secrets.NPM_AUTH }}
           npm version prerelease --preid=alpha.$(git rev-parse --short HEAD) --no-git-tag-version
           npm publish --tag alpha
           echo "Finished running publish alpha"
