@@ -9,5 +9,5 @@ cat <<EOF >> .npmrc
 registry = https://registry.npmjs.org/
 email = zhangjiahengpoping@gmail.com
 always-auth = true
-//registry.npmjs.org/@recklyss/hand-drawing-ui/:_auth=$1
+//registry.npmjs.org/@recklyss/hand-drawing-ui/:_authToken=$1
 EOF
