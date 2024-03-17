@@ -11,7 +11,7 @@ export default defineConfig({
     dts({
       insertTypesEntry: true,
       include: [ 'src' ],
-      exclude: [ '**/*.stories.tsx' ],
+      exclude: [ '**/*.stories.tsx', '**/*.spec.tsx' ],
     }),
   ],
   build: {
