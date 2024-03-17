@@ -18,7 +18,7 @@ export default defineConfig({
     lib: {
       name: 'hand_drawing_ui',
       entry: resolve(__dirname, 'src/index.ts'),
-      formats: [ 'es', 'umd', 'iife', 'cjs' ]
+      formats: [ 'es', 'umd' ]
     },
     rollupOptions: {
       external: [ ...Object.keys(packageJson.peerDependencies) ],
