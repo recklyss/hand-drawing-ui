@@ -44,6 +44,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           HUSKY: 0
         run: |
+          cp ./package.json ./dist/
           npm run release
 
       - name: publish alpha
