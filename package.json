@@ -1,7 +1,7 @@
 {
   "name": "@recklyss/hand-drawing-ui",
   "private": false,
-  "version": "0.0.1-alpha.e84eef0.0",
+  "version": "0.0.1",
   "type": "module",
   "files": [
     "dist"
