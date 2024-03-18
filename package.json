@@ -6,6 +6,9 @@
   "files": [
     "dist"
   ],
+  "repository": {
+    "url": "https://registry.npmjs.org/"
+  },
   "main": "./dist/hand-drawing-ui.js",
   "types": "./dist/index.d.ts",
   "scripts": {
