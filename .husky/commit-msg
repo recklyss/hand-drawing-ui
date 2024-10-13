@@ -1,0 +1,5 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"  # _ folder contains git hooks and is created via `husky install`
+
+
+npx --no -- commitlint --edit ${1}
